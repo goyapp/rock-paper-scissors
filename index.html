@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play the classic Rock, Paper, Scissors game against the computer. Beautiful modern design with smooth animations.">
+    <title>Rock Paper Scissors | Classic Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <span class="title-icon">🎮</span>
+                Rock Paper Scissors
+            </h1>
+            <p class="subtitle">Challenge the computer in this classic game!</p>
+        </header>
+
+        <div class="scoreboard">
+            <div class="score-card player-score-card">
+                <span class="score-label">You</span>
+                <span class="score-value" id="playerScore">0</span>
+            </div>
+            <div class="score-divider">
+                <span class="vs-text">VS</span>
+            </div>
+            <div class="score-card computer-score-card">
+                <span class="score-label">Computer</span>
+                <span class="score-value" id="computerScore">0</span>
+            </div>
+        </div>
+
+        <div class="battle-arena">
+            <div class="choice-display player-choice-display">
+                <div class="choice-icon" id="playerChoiceIcon">❓</div>
+                <span class="choice-label">Your Choice</span>
+            </div>
+            
+            <div class="result-display" id="resultDisplay">
+                <span class="result-text">Make your move!</span>
+            </div>
+
+            <div class="choice-display computer-choice-display">
+                <div class="choice-icon" id="computerChoiceIcon">❓</div>
+                <span class="choice-label">Computer's Choice</span>
+            </div>
+        </div>
+
+        <div class="choices-container">
+            <h2 class="choices-title">Choose Your Weapon</h2>
+            <div class="choices">
+                <button class="choice-btn" id="rockBtn" data-choice="rock" aria-label="Choose Rock">
+                    <span class="btn-icon">🪨</span>
+                    <span class="btn-label">Rock</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <button class="choice-btn" id="paperBtn" data-choice="paper" aria-label="Choose Paper">
+                    <span class="btn-icon">📄</span>
+                    <span class="btn-label">Paper</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <button class="choice-btn" id="scissorsBtn" data-choice="scissors" aria-label="Choose Scissors">
+                    <span class="btn-icon">✂️</span>
+                    <span class="btn-label">Scissors</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn" aria-label="Reset Game">
+            <span class="reset-icon">🔄</span>
+            Reset Game
+        </button>
+
+        <div class="game-stats">
+            <div class="stat">
+                <span class="stat-label">Games Played</span>
+                <span class="stat-value" id="gamesPlayed">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Win Rate</span>
+                <span class="stat-value" id="winRate">0%</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Current Streak</span>
+                <span class="stat-value" id="streak">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
